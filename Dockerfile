@@ -17,7 +17,7 @@ WORKDIR /app
 COPY . .
 
 # Build the project
-RUN mkdir build && cd build && cmake -DCMAKE_BUILD_TYPE=Release .. && cmake --build .
+RUN mkdir -p build && cd build && cmake -DCMAKE_BUILD_TYPE=Release .. && cmake --build .
 
 # Stage 2: Create the runtime image
 FROM ubuntu:22.04
