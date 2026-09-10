@@ -1,0 +1,10 @@
+^C:\USERS\HIMANSHU\.GEMINI\ANTIGRAVITY\SCRATCH\RETOUR\BUILD\_DEPS\GOOGLETEST-SUBBUILD\CMAKEFILES\3C478886F6005B013E16484B963FAE32\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/_deps/googletest-subbuild -BC:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/_deps/googletest-subbuild --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/_deps/googletest-subbuild/googletest-populate.slnx
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

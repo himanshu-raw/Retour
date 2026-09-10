@@ -12,6 +12,7 @@ find_package(Threads REQUIRED)
 include_directories(${CMAKE_SOURCE_DIR}/third_party/sqlite)
 include_directories(${CMAKE_SOURCE_DIR}/third_party/httplib)
 include_directories(${CMAKE_SOURCE_DIR}/third_party/nlohmann)
+include_directories(${CMAKE_SOURCE_DIR}/third_party)
 include_directories(${CMAKE_SOURCE_DIR}/include)
 
 # SQLite Library

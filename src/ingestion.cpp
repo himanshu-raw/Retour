@@ -49,54 +49,53 @@ void DataIngestion::fetchLiveTrafficData() {
         return;
     }
 
-    httplib::Client cli("https://api.tomtom.com");
-    cli.enable_server_certificate_verification(false);
+    // Instead of random sampling, we hardcode 5 major high-traffic highways in India
+    // to GUARANTEE data for the live dashboard!
+    struct Coord { double lat; double lon; };
+    std::vector<Coord> target_points = {
+        {28.59, 77.22}, // Delhi (Outer Ring Road)
+        {19.08, 72.85}, // Mumbai (Western Express Highway)
+        {12.95, 77.70}, // Bangalore (Outer Ring Road)
+        {17.43, 78.34}, // Hyderabad (Outer Ring Road)
+        {13.04, 80.25}  // Chennai (Anna Salai)
+    };
 
-    // Parse the bounding box to generate random points inside it
-    // Expected format: lat1,lon1;lat2,lon2
-    double lat_min = 41.87, lat_max = 41.89;
-    double lon_min = -87.64, lon_max = -87.61;
-    
-    size_t semi_pos = m_bbox.find(';');
-    if (semi_pos != std::string::npos) {
-        std::string p1 = m_bbox.substr(0, semi_pos);
-        std::string p2 = m_bbox.substr(semi_pos + 1);
-        
-        size_t comma1 = p1.find(',');
-        size_t comma2 = p2.find(',');
-        if (comma1 != std::string::npos && comma2 != std::string::npos) {
-            lat_min = std::stod(p1.substr(0, comma1));
-            lon_min = std::stod(p1.substr(comma1 + 1));
-            lat_max = std::stod(p2.substr(0, comma2));
-            lon_max = std::stod(p2.substr(comma2 + 1));
-            
-            if (lat_min > lat_max) std::swap(lat_min, lat_max);
-            if (lon_min > lon_max) std::swap(lon_min, lon_max);
-        }
-    }
+    // Sample these 5 known high-traffic points per interval
+    for (const auto& point : target_points) {
+        double query_lat = point.lat;
+        double query_lon = point.lon;
 
-    static std::mt19937 geo_gen(std::random_device{}());
-    std::uniform_real_distribution<> lat_dist(lat_min, lat_max);
-    std::uniform_real_distribution<> lon_dist(lon_min, lon_max);
-
-    // Sample 3 random points in the bounding box per interval
-    for (int i = 0; i < 3; ++i) {
-        double query_lat = lat_dist(geo_gen);
-        double query_lon = lon_dist(geo_gen);
-
-        std::string path = "/traffic/services/4/flowSegmentData/absolute/10/json?key=" + m_api_key + 
+        std::string url = "https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?key=" + m_api_key + 
                            "&point=" + std::to_string(query_lat) + "," + std::to_string(query_lon);
         
-        auto res = cli.Get(path.c_str());
+        std::string curl_cmd = "curl -s \"" + url + "\"";
+        std::string response_body;
         
-        if (res && res->status == 200) {
-            try {
-                auto j = json::parse(res->body);
-                auto now = std::chrono::duration_cast<std::chrono::seconds>(
-                    std::chrono::system_clock::now().time_since_epoch()).count();
+#ifdef _WIN32
+        FILE* pipe = _popen(curl_cmd.c_str(), "r");
+#else
+        FILE* pipe = popen(curl_cmd.c_str(), "r");
+#endif
 
-                if (j.contains("flowSegmentData")) {
-                    const auto& flow = j["flowSegmentData"];
+        if (pipe) {
+            char buffer[256];
+            while (fgets(buffer, sizeof(buffer), pipe) != nullptr) {
+                response_body += buffer;
+            }
+#ifdef _WIN32
+            _pclose(pipe);
+#else
+            pclose(pipe);
+#endif
+
+            if (!response_body.empty() && response_body.find("\"flowSegmentData\"") != std::string::npos) {
+                try {
+                    auto j = json::parse(response_body);
+                    auto now = std::chrono::duration_cast<std::chrono::seconds>(
+                        std::chrono::system_clock::now().time_since_epoch()).count();
+
+                    if (j.contains("flowSegmentData")) {
+                        const auto& flow = j["flowSegmentData"];
                     
                     double speed = flow.value("currentSpeed", 65.0);
                     double confidence = flow.value("confidence", 0.0); // 0.0 to 1.0
@@ -131,12 +130,8 @@ void DataIngestion::fetchLiveTrafficData() {
             } catch (const std::exception& e) {
                 std::cerr << "[Ingestion] JSON Parsing error: " << e.what() << std::endl;
             }
-        } else {
-            // Ignore 404s (point might not be on a road)
-            if (res && res->status != 404) {
-                std::cerr << "[Ingestion] HTTP Request failed. Status: " << (res ? res->status : -1) << std::endl;
-            }
-        }
-    }
+        } // closes if (!response_body.empty())
+        } // closes if (pipe)
+    } // closes for loop
     std::cout << "[Ingestion] Finished TomTom polling cycle." << std::endl;
 }

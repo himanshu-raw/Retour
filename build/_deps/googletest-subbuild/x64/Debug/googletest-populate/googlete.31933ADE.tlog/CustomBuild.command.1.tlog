@@ -1,0 +1,152 @@
+^C:\USERS\HIMANSHU\.GEMINI\ANTIGRAVITY\SCRATCH\RETOUR\BUILD\_DEPS\GOOGLETEST-SUBBUILD\CMAKEFILES\75C6ACEDCC4E8029E2AB69AE182789B8\GOOGLETEST-POPULATE-MKDIR.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -Dcfgdir=/Debug -P C:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/_deps/googletest-subbuild/googletest-populate-prefix/tmp/googletest-populate-mkdirs.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/Debug/googletest-populate-mkdir
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\HIMANSHU\.GEMINI\ANTIGRAVITY\SCRATCH\RETOUR\BUILD\_DEPS\GOOGLETEST-SUBBUILD\CMAKEFILES\75C6ACEDCC4E8029E2AB69AE182789B8\GOOGLETEST-POPULATE-DOWNLOAD.RULE
+setlocal
+cd C:\Users\himanshu\.gemini\antigravity\scratch\Retour\build\_deps
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P C:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/download-googletest-populate.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P C:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/verify-googletest-populate.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P C:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/extract-googletest-populate.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/Debug/googletest-populate-download
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\HIMANSHU\.GEMINI\ANTIGRAVITY\SCRATCH\RETOUR\BUILD\_DEPS\GOOGLETEST-SUBBUILD\CMAKEFILES\75C6ACEDCC4E8029E2AB69AE182789B8\GOOGLETEST-POPULATE-UPDATE.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/Debug/googletest-populate-update
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\HIMANSHU\.GEMINI\ANTIGRAVITY\SCRATCH\RETOUR\BUILD\_DEPS\GOOGLETEST-SUBBUILD\CMAKEFILES\75C6ACEDCC4E8029E2AB69AE182789B8\GOOGLETEST-POPULATE-PATCH.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/Debug/googletest-populate-patch
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\HIMANSHU\.GEMINI\ANTIGRAVITY\SCRATCH\RETOUR\BUILD\_DEPS\GOOGLETEST-SUBBUILD\CMAKEFILES\75C6ACEDCC4E8029E2AB69AE182789B8\GOOGLETEST-POPULATE-CONFIGURE.RULE
+setlocal
+cd C:\Users\himanshu\.gemini\antigravity\scratch\Retour\build\_deps\googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/Debug/googletest-populate-configure
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\HIMANSHU\.GEMINI\ANTIGRAVITY\SCRATCH\RETOUR\BUILD\_DEPS\GOOGLETEST-SUBBUILD\CMAKEFILES\75C6ACEDCC4E8029E2AB69AE182789B8\GOOGLETEST-POPULATE-BUILD.RULE
+setlocal
+cd C:\Users\himanshu\.gemini\antigravity\scratch\Retour\build\_deps\googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/Debug/googletest-populate-build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\HIMANSHU\.GEMINI\ANTIGRAVITY\SCRATCH\RETOUR\BUILD\_DEPS\GOOGLETEST-SUBBUILD\CMAKEFILES\75C6ACEDCC4E8029E2AB69AE182789B8\GOOGLETEST-POPULATE-INSTALL.RULE
+setlocal
+cd C:\Users\himanshu\.gemini\antigravity\scratch\Retour\build\_deps\googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/Debug/googletest-populate-install
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\HIMANSHU\.GEMINI\ANTIGRAVITY\SCRATCH\RETOUR\BUILD\_DEPS\GOOGLETEST-SUBBUILD\CMAKEFILES\75C6ACEDCC4E8029E2AB69AE182789B8\GOOGLETEST-POPULATE-TEST.RULE
+setlocal
+cd C:\Users\himanshu\.gemini\antigravity\scratch\Retour\build\_deps\googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/Debug/googletest-populate-test
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\HIMANSHU\.GEMINI\ANTIGRAVITY\SCRATCH\RETOUR\BUILD\_DEPS\GOOGLETEST-SUBBUILD\CMAKEFILES\288B06AD0C030D4B39AB21935FCB757F\GOOGLETEST-POPULATE-COMPLETE.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/_deps/googletest-subbuild/CMakeFiles/Debug
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/_deps/googletest-subbuild/CMakeFiles/Debug/googletest-populate-complete
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/Debug/googletest-populate-done
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\HIMANSHU\.GEMINI\ANTIGRAVITY\SCRATCH\RETOUR\BUILD\_DEPS\GOOGLETEST-SUBBUILD\CMAKEFILES\3C478886F6005B013E16484B963FAE32\GOOGLETEST-POPULATE.RULE
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\HIMANSHU\.GEMINI\ANTIGRAVITY\SCRATCH\RETOUR\BUILD\_DEPS\GOOGLETEST-SUBBUILD\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/_deps/googletest-subbuild -BC:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/_deps/googletest-subbuild --check-stamp-file C:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/_deps/googletest-subbuild/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

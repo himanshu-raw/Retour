@@ -1,0 +1,10 @@
+^C:\USERS\HIMANSHU\.GEMINI\ANTIGRAVITY\SCRATCH\RETOUR\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/himanshu/.gemini/antigravity/scratch/Retour -BC:/Users/himanshu/.gemini/antigravity/scratch/Retour/build --check-stamp-file C:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

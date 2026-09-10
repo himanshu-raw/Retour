@@ -1,0 +1,1617 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineSystem.cmake:218 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Windows - 10.0.26200 - AMD64
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:501 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:538 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\windows\\system32"
+        - "C:\\windows"
+        - "C:\\windows\\System32\\Wbem"
+        - "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Cloudflare\\Cloudflare WARP\\"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Users\\himanshu\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\himanshu\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild version 18.10.1-1.26427.6+3cd27c13e for .NET Framework
+      Build started 10-09-2026 16:52:14.
+      
+      Project "C:\\Users\\himanshu\\.gemini\\antigravity\\scratch\\Retour\\build\\CMakeFiles\\4.4.3\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+        Creating directory "Debug\\CompilerIdCXX.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        Touching "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+      ClCompile:
+        C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc145.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> C:\\Users\\himanshu\\.gemini\\antigravity\\scratch\\Retour\\build\\CMakeFiles\\4.4.3\\CompilerIdCXX\\CompilerIdCXX.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
+      Done Building Project "C:\\Users\\himanshu\\.gemini\\antigravity\\scratch\\Retour\\build\\CMakeFiles\\4.4.3\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:02.43
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        C:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/CMakeFiles/4.4.3/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:64 (__resolve_tool_path)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:102 (__resolve_linker_path)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "link"
+    candidate_directories:
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/"
+      - "C:/Program Files/Cloudflare/Cloudflare WARP/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Users/himanshu/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/himanshu/AppData/Local/Programs/DockerDesktop/resources/bin/"
+    searched_directories:
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/link.com"
+    found: "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/link.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\windows\\system32"
+        - "C:\\windows"
+        - "C:\\windows\\System32\\Wbem"
+        - "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Cloudflare\\Cloudflare WARP\\"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Users\\himanshu\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\himanshu\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:64 (__resolve_tool_path)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:103 (__resolve_linker_path)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "lld-link"
+    candidate_directories:
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/"
+      - "C:/Program Files/Cloudflare/Cloudflare WARP/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Users/himanshu/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/himanshu/AppData/Local/Programs/DockerDesktop/resources/bin/"
+    searched_directories:
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lld-link.com"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lld-link.exe"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lld-link"
+      - "C:/Windows/System32/lld-link.com"
+      - "C:/Windows/System32/lld-link.exe"
+      - "C:/Windows/System32/lld-link"
+      - "C:/Windows/lld-link.com"
+      - "C:/Windows/lld-link.exe"
+      - "C:/Windows/lld-link"
+      - "C:/Windows/System32/wbem/lld-link.com"
+      - "C:/Windows/System32/wbem/lld-link.exe"
+      - "C:/Windows/System32/wbem/lld-link"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link"
+      - "C:/Windows/System32/OpenSSH/lld-link.com"
+      - "C:/Windows/System32/OpenSSH/lld-link.exe"
+      - "C:/Windows/System32/OpenSSH/lld-link"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/lld-link.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/lld-link.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/lld-link"
+      - "C:/Program Files/Cloudflare/Cloudflare WARP/lld-link.com"
+      - "C:/Program Files/Cloudflare/Cloudflare WARP/lld-link.exe"
+      - "C:/Program Files/Cloudflare/Cloudflare WARP/lld-link"
+      - "C:/Program Files/CMake/bin/lld-link.com"
+      - "C:/Program Files/CMake/bin/lld-link.exe"
+      - "C:/Program Files/CMake/bin/lld-link"
+      - "C:/Program Files/Git/cmd/lld-link.com"
+      - "C:/Program Files/Git/cmd/lld-link.exe"
+      - "C:/Program Files/Git/cmd/lld-link"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link"
+      - "C:/Users/himanshu/AppData/Local/Microsoft/WindowsApps/lld-link.com"
+      - "C:/Users/himanshu/AppData/Local/Microsoft/WindowsApps/lld-link.exe"
+      - "C:/Users/himanshu/AppData/Local/Microsoft/WindowsApps/lld-link"
+      - "C:/Users/himanshu/AppData/Local/Programs/DockerDesktop/resources/bin/lld-link.com"
+      - "C:/Users/himanshu/AppData/Local/Programs/DockerDesktop/resources/bin/lld-link.exe"
+      - "C:/Users/himanshu/AppData/Local/Programs/DockerDesktop/resources/bin/lld-link"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\windows\\system32"
+        - "C:\\windows"
+        - "C:\\windows\\System32\\Wbem"
+        - "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Cloudflare\\Cloudflare WARP\\"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Users\\himanshu\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\himanshu\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_LINKER"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "link"
+    candidate_directories:
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/"
+      - "C:/Program Files/Cloudflare/Cloudflare WARP/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Users/himanshu/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/himanshu/AppData/Local/Programs/DockerDesktop/resources/bin/"
+    searched_directories:
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/link.com"
+    found: "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/link.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\windows\\system32"
+        - "C:\\windows"
+        - "C:\\windows\\System32\\Wbem"
+        - "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Cloudflare\\Cloudflare WARP\\"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Users\\himanshu\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\himanshu\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_MT"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "mt"
+    candidate_directories:
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/"
+      - "C:/Program Files/Cloudflare/Cloudflare WARP/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Users/himanshu/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/himanshu/AppData/Local/Programs/DockerDesktop/resources/bin/"
+    searched_directories:
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/mt.com"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/mt.exe"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/mt"
+      - "C:/Windows/System32/mt.com"
+      - "C:/Windows/System32/mt.exe"
+      - "C:/Windows/System32/mt"
+      - "C:/Windows/mt.com"
+      - "C:/Windows/mt.exe"
+      - "C:/Windows/mt"
+      - "C:/Windows/System32/wbem/mt.com"
+      - "C:/Windows/System32/wbem/mt.exe"
+      - "C:/Windows/System32/wbem/mt"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/mt.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/mt.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/mt"
+      - "C:/Windows/System32/OpenSSH/mt.com"
+      - "C:/Windows/System32/OpenSSH/mt.exe"
+      - "C:/Windows/System32/OpenSSH/mt"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/mt.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/mt.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/mt"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/mt.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/mt.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/mt"
+      - "C:/Program Files/Cloudflare/Cloudflare WARP/mt.com"
+      - "C:/Program Files/Cloudflare/Cloudflare WARP/mt.exe"
+      - "C:/Program Files/Cloudflare/Cloudflare WARP/mt"
+      - "C:/Program Files/CMake/bin/mt.com"
+      - "C:/Program Files/CMake/bin/mt.exe"
+      - "C:/Program Files/CMake/bin/mt"
+      - "C:/Program Files/Git/cmd/mt.com"
+      - "C:/Program Files/Git/cmd/mt.exe"
+      - "C:/Program Files/Git/cmd/mt"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/mt.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/mt.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/mt"
+      - "C:/Users/himanshu/AppData/Local/Microsoft/WindowsApps/mt.com"
+      - "C:/Users/himanshu/AppData/Local/Microsoft/WindowsApps/mt.exe"
+      - "C:/Users/himanshu/AppData/Local/Microsoft/WindowsApps/mt"
+      - "C:/Users/himanshu/AppData/Local/Programs/DockerDesktop/resources/bin/mt.com"
+      - "C:/Users/himanshu/AppData/Local/Programs/DockerDesktop/resources/bin/mt.exe"
+      - "C:/Users/himanshu/AppData/Local/Programs/DockerDesktop/resources/bin/mt"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\windows\\system32"
+        - "C:\\windows"
+        - "C:\\windows\\System32\\Wbem"
+        - "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Cloudflare\\Cloudflare WARP\\"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Users\\himanshu\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\himanshu\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_AR"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "lib"
+    candidate_directories:
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/"
+      - "C:/Program Files/Cloudflare/Cloudflare WARP/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Users/himanshu/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/himanshu/AppData/Local/Programs/DockerDesktop/resources/bin/"
+    searched_directories:
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lib.com"
+    found: "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lib.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\windows\\system32"
+        - "C:\\windows"
+        - "C:\\windows\\System32\\Wbem"
+        - "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Cloudflare\\Cloudflare WARP\\"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Users\\himanshu\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\himanshu\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:501 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:538 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\windows\\system32"
+        - "C:\\windows"
+        - "C:\\windows\\System32\\Wbem"
+        - "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Cloudflare\\Cloudflare WARP\\"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Users\\himanshu\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\himanshu\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild version 18.10.1-1.26427.6+3cd27c13e for .NET Framework
+      Build started 10-09-2026 16:52:17.
+      
+      Project "C:\\Users\\himanshu\\.gemini\\antigravity\\scratch\\Retour\\build\\CMakeFiles\\4.4.3\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+        Creating directory "Debug\\CompilerIdC.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        Touching "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+      ClCompile:
+        C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc145.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+        CMakeCCompilerId.c
+      Link:
+        C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> C:\\Users\\himanshu\\.gemini\\antigravity\\scratch\\Retour\\build\\CMakeFiles\\4.4.3\\CompilerIdC\\CompilerIdC.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_C_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate".
+      Done Building Project "C:\\Users\\himanshu\\.gemini\\antigravity\\scratch\\Retour\\build\\CMakeFiles\\4.4.3\\CompilerIdC\\CompilerIdC.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:00.71
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+      
+      The C compiler identification is MSVC, found in:
+        C:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/CMakeFiles/4.4.3/CompilerIdC/CompilerIdC.exe
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:64 (__resolve_tool_path)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:103 (__resolve_linker_path)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "lld-link"
+    candidate_directories:
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/"
+      - "C:/Program Files/Cloudflare/Cloudflare WARP/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Users/himanshu/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/himanshu/AppData/Local/Programs/DockerDesktop/resources/bin/"
+    searched_directories:
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lld-link.com"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lld-link.exe"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lld-link"
+      - "C:/Windows/System32/lld-link.com"
+      - "C:/Windows/System32/lld-link.exe"
+      - "C:/Windows/System32/lld-link"
+      - "C:/Windows/lld-link.com"
+      - "C:/Windows/lld-link.exe"
+      - "C:/Windows/lld-link"
+      - "C:/Windows/System32/wbem/lld-link.com"
+      - "C:/Windows/System32/wbem/lld-link.exe"
+      - "C:/Windows/System32/wbem/lld-link"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link"
+      - "C:/Windows/System32/OpenSSH/lld-link.com"
+      - "C:/Windows/System32/OpenSSH/lld-link.exe"
+      - "C:/Windows/System32/OpenSSH/lld-link"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/lld-link.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/lld-link.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/lld-link"
+      - "C:/Program Files/Cloudflare/Cloudflare WARP/lld-link.com"
+      - "C:/Program Files/Cloudflare/Cloudflare WARP/lld-link.exe"
+      - "C:/Program Files/Cloudflare/Cloudflare WARP/lld-link"
+      - "C:/Program Files/CMake/bin/lld-link.com"
+      - "C:/Program Files/CMake/bin/lld-link.exe"
+      - "C:/Program Files/CMake/bin/lld-link"
+      - "C:/Program Files/Git/cmd/lld-link.com"
+      - "C:/Program Files/Git/cmd/lld-link.exe"
+      - "C:/Program Files/Git/cmd/lld-link"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link"
+      - "C:/Users/himanshu/AppData/Local/Microsoft/WindowsApps/lld-link.com"
+      - "C:/Users/himanshu/AppData/Local/Microsoft/WindowsApps/lld-link.exe"
+      - "C:/Users/himanshu/AppData/Local/Microsoft/WindowsApps/lld-link"
+      - "C:/Users/himanshu/AppData/Local/Programs/DockerDesktop/resources/bin/lld-link.com"
+      - "C:/Users/himanshu/AppData/Local/Programs/DockerDesktop/resources/bin/lld-link.exe"
+      - "C:/Users/himanshu/AppData/Local/Programs/DockerDesktop/resources/bin/lld-link"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\windows\\system32"
+        - "C:\\windows"
+        - "C:\\windows\\System32\\Wbem"
+        - "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Cloudflare\\Cloudflare WARP\\"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Users\\himanshu\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\himanshu\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineRCCompiler.cmake:40 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/Platform/Windows-MSVC.cmake:592 (enable_language)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/Platform/Windows-MSVC.cmake:565 (__windows_compiler_msvc_enable_rc)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/Platform/Windows-MSVC-CXX.cmake:6 (__windows_compiler_msvc)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeCXXInformation.cmake:48 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_RC_COMPILER"
+    description: "RC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "rc"
+    candidate_directories:
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/"
+      - "C:/Program Files/Cloudflare/Cloudflare WARP/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Users/himanshu/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/himanshu/AppData/Local/Programs/DockerDesktop/resources/bin/"
+      - "C:/Program Files/bin/"
+      - "C:/Program Files/sbin/"
+      - "C:/Program Files/"
+      - "C:/Program Files (x86)/bin/"
+      - "C:/Program Files (x86)/sbin/"
+      - "C:/Program Files (x86)/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/CMake/sbin/"
+      - "C:/Program Files/CMake/"
+      - "C:/Program Files (x86)/Retour/bin/"
+      - "C:/Program Files (x86)/Retour/sbin/"
+      - "C:/Program Files (x86)/Retour/"
+    searched_directories:
+      - "C:/Windows/System32/rc.com"
+      - "C:/Windows/System32/rc.exe"
+      - "C:/Windows/System32/rc"
+      - "C:/Windows/rc.com"
+      - "C:/Windows/rc.exe"
+      - "C:/Windows/rc"
+      - "C:/Windows/System32/wbem/rc.com"
+      - "C:/Windows/System32/wbem/rc.exe"
+      - "C:/Windows/System32/wbem/rc"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/rc.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/rc.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/rc"
+      - "C:/Windows/System32/OpenSSH/rc.com"
+      - "C:/Windows/System32/OpenSSH/rc.exe"
+      - "C:/Windows/System32/OpenSSH/rc"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/rc.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/rc.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/rc"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/rc.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/rc.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/rc"
+      - "C:/Program Files/Cloudflare/Cloudflare WARP/rc.com"
+      - "C:/Program Files/Cloudflare/Cloudflare WARP/rc.exe"
+      - "C:/Program Files/Cloudflare/Cloudflare WARP/rc"
+      - "C:/Program Files/CMake/bin/rc.com"
+      - "C:/Program Files/CMake/bin/rc.exe"
+      - "C:/Program Files/CMake/bin/rc"
+      - "C:/Program Files/Git/cmd/rc.com"
+      - "C:/Program Files/Git/cmd/rc.exe"
+      - "C:/Program Files/Git/cmd/rc"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/rc.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/rc.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/rc"
+      - "C:/Users/himanshu/AppData/Local/Microsoft/WindowsApps/rc.com"
+      - "C:/Users/himanshu/AppData/Local/Microsoft/WindowsApps/rc.exe"
+      - "C:/Users/himanshu/AppData/Local/Microsoft/WindowsApps/rc"
+      - "C:/Users/himanshu/AppData/Local/Programs/DockerDesktop/resources/bin/rc.com"
+      - "C:/Users/himanshu/AppData/Local/Programs/DockerDesktop/resources/bin/rc.exe"
+      - "C:/Users/himanshu/AppData/Local/Programs/DockerDesktop/resources/bin/rc"
+      - "C:/Program Files/bin/rc.com"
+      - "C:/Program Files/bin/rc.exe"
+      - "C:/Program Files/bin/rc"
+      - "C:/Program Files/sbin/rc.com"
+      - "C:/Program Files/sbin/rc.exe"
+      - "C:/Program Files/sbin/rc"
+      - "C:/Program Files/rc.com"
+      - "C:/Program Files/rc.exe"
+      - "C:/Program Files/rc"
+      - "C:/Program Files (x86)/bin/rc.com"
+      - "C:/Program Files (x86)/bin/rc.exe"
+      - "C:/Program Files (x86)/bin/rc"
+      - "C:/Program Files (x86)/sbin/rc.com"
+      - "C:/Program Files (x86)/sbin/rc.exe"
+      - "C:/Program Files (x86)/sbin/rc"
+      - "C:/Program Files (x86)/rc.com"
+      - "C:/Program Files (x86)/rc.exe"
+      - "C:/Program Files (x86)/rc"
+      - "C:/Program Files/CMake/bin/rc.com"
+      - "C:/Program Files/CMake/bin/rc.exe"
+      - "C:/Program Files/CMake/bin/rc"
+      - "C:/Program Files/CMake/sbin/rc.com"
+      - "C:/Program Files/CMake/sbin/rc.exe"
+      - "C:/Program Files/CMake/sbin/rc"
+      - "C:/Program Files/CMake/rc.com"
+      - "C:/Program Files/CMake/rc.exe"
+      - "C:/Program Files/CMake/rc"
+      - "C:/Program Files (x86)/Retour/bin/rc.com"
+      - "C:/Program Files (x86)/Retour/bin/rc.exe"
+      - "C:/Program Files (x86)/Retour/bin/rc"
+      - "C:/Program Files (x86)/Retour/sbin/rc.com"
+      - "C:/Program Files (x86)/Retour/sbin/rc.exe"
+      - "C:/Program Files (x86)/Retour/sbin/rc"
+      - "C:/Program Files (x86)/Retour/rc.com"
+      - "C:/Program Files (x86)/Retour/rc.exe"
+      - "C:/Program Files (x86)/Retour/rc"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\windows\\system32"
+        - "C:\\windows"
+        - "C:\\windows\\System32\\Wbem"
+        - "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Cloudflare\\Cloudflare WARP\\"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Users\\himanshu\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\himanshu\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/Retour"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files (x86)/Retour"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerABI.cmake:123 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "C:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/CMakeFiles/CMakeScratch/TryCompile-mxhkil"
+      binary: "C:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/CMakeFiles/CMakeScratch/TryCompile-mxhkil"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: false
+      stdout: |
+        Change Dir: 'C:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/CMakeFiles/CMakeScratch/TryCompile-mxhkil'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/18/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_ff959.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        MSBuild version 18.10.1-1.26427.6+3cd27c13e for .NET Framework
+        Build started 10-09-2026 16:52:18.
+        
+        Project "C:\\Users\\himanshu\\.gemini\\antigravity\\scratch\\Retour\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mxhkil\\cmTC_ff959.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\himanshu\\.gemini\\antigravity\\scratch\\Retour\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mxhkil\\Debug\\".
+          Creating directory "cmTC_ff959.dir\\Debug\\cmTC_ff959.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_ff959.dir\\Debug\\cmTC_ff959.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_ff959.dir\\Debug\\cmTC_ff959.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_ff959.dir\\Debug\\\\" /Fd"cmTC_ff959.dir\\Debug\\vc145.pdb" /external:W3 /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.4\\Modules\\CMakeCXXCompilerABI.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.51.36257 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_ff959.dir\\Debug\\\\" /Fd"cmTC_ff959.dir\\Debug\\vc145.pdb" /external:W3 /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.4\\Modules\\CMakeCXXCompilerABI.cpp"
+          CMakeCXXCompilerABI.cpp
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\himanshu\\.gemini\\antigravity\\scratch\\Retour\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mxhkil\\Debug\\cmTC_ff959.exe" /INCREMENTAL /ILK:"cmTC_ff959.dir\\Debug\\cmTC_ff959.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/CMakeFiles/CMakeScratch/TryCompile-mxhkil/Debug/cmTC_ff959.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/CMakeFiles/CMakeScratch/TryCompile-mxhkil/Debug/cmTC_ff959.lib" /MACHINE:X64  /machine:x64 cmTC_ff959.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_ff959.vcxproj -> C:\\Users\\himanshu\\.gemini\\antigravity\\scratch\\Retour\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mxhkil\\Debug\\cmTC_ff959.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_ff959.dir\\Debug\\cmTC_ff959.tlog\\unsuccessfulbuild".
+          Touching "cmTC_ff959.dir\\Debug\\cmTC_ff959.tlog\\cmTC_ff959.lastbuildstate".
+        Done Building Project "C:\\Users\\himanshu\\.gemini\\antigravity\\scratch\\Retour\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mxhkil\\cmTC_ff959.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.64
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerABI.cmake:291 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        link line: [  C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\himanshu\\.gemini\\antigravity\\scratch\\Retour\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mxhkil\\Debug\\cmTC_ff959.exe" /INCREMENTAL /ILK:"cmTC_ff959.dir\\Debug\\cmTC_ff959.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/CMakeFiles/CMakeScratch/TryCompile-mxhkil/Debug/cmTC_ff959.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/CMakeFiles/CMakeScratch/TryCompile-mxhkil/Debug/cmTC_ff959.lib" /MACHINE:X64  /machine:x64 cmTC_ff959.dir\\Debug\\CMakeCXXCompilerABI.obj] ==> linker [C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe]
+        linker tool for 'CXX': C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/HostX64/x64/link.exe 
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/Internal/CMakeDetermineLinkerId.cmake:41 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerABI.cmake:337 (cmake_determine_linker_id)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the CXX compiler's linker: "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.51.36257.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerABI.cmake:123 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/CMakeFiles/CMakeScratch/TryCompile-fxhxn9"
+      binary: "C:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/CMakeFiles/CMakeScratch/TryCompile-fxhxn9"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: false
+      stdout: |
+        Change Dir: 'C:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/CMakeFiles/CMakeScratch/TryCompile-fxhxn9'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/18/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_11f82.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        MSBuild version 18.10.1-1.26427.6+3cd27c13e for .NET Framework
+        Build started 10-09-2026 16:52:19.
+        
+        Project "C:\\Users\\himanshu\\.gemini\\antigravity\\scratch\\Retour\\build\\CMakeFiles\\CMakeScratch\\TryCompile-fxhxn9\\cmTC_11f82.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\himanshu\\.gemini\\antigravity\\scratch\\Retour\\build\\CMakeFiles\\CMakeScratch\\TryCompile-fxhxn9\\Debug\\".
+          Creating directory "cmTC_11f82.dir\\Debug\\cmTC_11f82.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_11f82.dir\\Debug\\cmTC_11f82.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_11f82.dir\\Debug\\cmTC_11f82.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_11f82.dir\\Debug\\\\" /Fd"cmTC_11f82.dir\\Debug\\vc145.pdb" /external:W3 /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.4\\Modules\\CMakeCCompilerABI.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.51.36257 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_11f82.dir\\Debug\\\\" /Fd"cmTC_11f82.dir\\Debug\\vc145.pdb" /external:W3 /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.4\\Modules\\CMakeCCompilerABI.c"
+          CMakeCCompilerABI.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\himanshu\\.gemini\\antigravity\\scratch\\Retour\\build\\CMakeFiles\\CMakeScratch\\TryCompile-fxhxn9\\Debug\\cmTC_11f82.exe" /INCREMENTAL /ILK:"cmTC_11f82.dir\\Debug\\cmTC_11f82.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/CMakeFiles/CMakeScratch/TryCompile-fxhxn9/Debug/cmTC_11f82.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/CMakeFiles/CMakeScratch/TryCompile-fxhxn9/Debug/cmTC_11f82.lib" /MACHINE:X64  /machine:x64 cmTC_11f82.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_11f82.vcxproj -> C:\\Users\\himanshu\\.gemini\\antigravity\\scratch\\Retour\\build\\CMakeFiles\\CMakeScratch\\TryCompile-fxhxn9\\Debug\\cmTC_11f82.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_11f82.dir\\Debug\\cmTC_11f82.tlog\\unsuccessfulbuild".
+          Touching "cmTC_11f82.dir\\Debug\\cmTC_11f82.tlog\\cmTC_11f82.lastbuildstate".
+        Done Building Project "C:\\Users\\himanshu\\.gemini\\antigravity\\scratch\\Retour\\build\\CMakeFiles\\CMakeScratch\\TryCompile-fxhxn9\\cmTC_11f82.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.60
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerABI.cmake:291 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        link line: [  C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\himanshu\\.gemini\\antigravity\\scratch\\Retour\\build\\CMakeFiles\\CMakeScratch\\TryCompile-fxhxn9\\Debug\\cmTC_11f82.exe" /INCREMENTAL /ILK:"cmTC_11f82.dir\\Debug\\cmTC_11f82.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/CMakeFiles/CMakeScratch/TryCompile-fxhxn9/Debug/cmTC_11f82.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/CMakeFiles/CMakeScratch/TryCompile-fxhxn9/Debug/cmTC_11f82.lib" /MACHINE:X64  /machine:x64 cmTC_11f82.dir\\Debug\\CMakeCCompilerABI.obj] ==> linker [C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe]
+        linker tool for 'C': C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/HostX64/x64/link.exe 
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/Internal/CMakeDetermineLinkerId.cmake:41 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerABI.cmake:337 (cmake_determine_linker_id)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the C compiler's linker: "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.51.36257.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/Internal/CheckSourceCompiles.cmake:81 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CheckCSourceCompiles.cmake:103 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/FindThreads.cmake:160 (check_c_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/FindThreads.cmake:226 (_threads_check_libc)"
+      - "CMakeLists.txt:9 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "C:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/CMakeFiles/CMakeScratch/TryCompile-og39ej"
+      binary: "C:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/CMakeFiles/CMakeScratch/TryCompile-og39ej"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/CMakeFiles/CMakeScratch/TryCompile-og39ej'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/18/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_0034f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        MSBuild version 18.10.1-1.26427.6+3cd27c13e for .NET Framework
+        Build started 10-09-2026 16:52:20.
+        
+        Project "C:\\Users\\himanshu\\.gemini\\antigravity\\scratch\\Retour\\build\\CMakeFiles\\CMakeScratch\\TryCompile-og39ej\\cmTC_0034f.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\himanshu\\.gemini\\antigravity\\scratch\\Retour\\build\\CMakeFiles\\CMakeScratch\\TryCompile-og39ej\\Debug\\".
+          Creating directory "cmTC_0034f.dir\\Debug\\cmTC_0034f.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_0034f.dir\\Debug\\cmTC_0034f.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_0034f.dir\\Debug\\cmTC_0034f.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_0034f.dir\\Debug\\\\" /Fd"cmTC_0034f.dir\\Debug\\vc145.pdb" /external:W3 /TC /errorReport:queue "C:\\Users\\himanshu\\.gemini\\antigravity\\scratch\\Retour\\build\\CMakeFiles\\CMakeScratch\\TryCompile-og39ej\\src.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.51.36257 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_0034f.dir\\Debug\\\\" /Fd"cmTC_0034f.dir\\Debug\\vc145.pdb" /external:W3 /TC /errorReport:queue "C:\\Users\\himanshu\\.gemini\\antigravity\\scratch\\Retour\\build\\CMakeFiles\\CMakeScratch\\TryCompile-og39ej\\src.c"
+          src.c
+        C:\\Users\\himanshu\\.gemini\\antigravity\\scratch\\Retour\\build\\CMakeFiles\\CMakeScratch\\TryCompile-og39ej\\src.c(1,10): error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\Users\\himanshu\\.gemini\\antigravity\\scratch\\Retour\\build\\CMakeFiles\\CMakeScratch\\TryCompile-og39ej\\cmTC_0034f.vcxproj]
+        Done Building Project "C:\\Users\\himanshu\\.gemini\\antigravity\\scratch\\Retour\\build\\CMakeFiles\\CMakeScratch\\TryCompile-og39ej\\cmTC_0034f.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "C:\\Users\\himanshu\\.gemini\\antigravity\\scratch\\Retour\\build\\CMakeFiles\\CMakeScratch\\TryCompile-og39ej\\cmTC_0034f.vcxproj" (default target) (1) ->
+        (ClCompile target) -> 
+          C:\\Users\\himanshu\\.gemini\\antigravity\\scratch\\Retour\\build\\CMakeFiles\\CMakeScratch\\TryCompile-og39ej\\src.c(1,10): error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\Users\\himanshu\\.gemini\\antigravity\\scratch\\Retour\\build\\CMakeFiles\\CMakeScratch\\TryCompile-og39ej\\cmTC_0034f.vcxproj]
+        
+            0 Warning(s)
+            1 Error(s)
+        
+        Time Elapsed 00:00:00.48
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CheckLibraryExists.cmake:142 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/FindThreads.cmake:175 (check_library_exists)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/FindThreads.cmake:238 (_threads_check_lib)"
+      - "CMakeLists.txt:9 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthreads"
+    directories:
+      source: "C:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/CMakeFiles/CMakeScratch/TryCompile-8qsxzw"
+      binary: "C:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/CMakeFiles/CMakeScratch/TryCompile-8qsxzw"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREADS_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/CMakeFiles/CMakeScratch/TryCompile-8qsxzw'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/18/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_07ac7.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        MSBuild version 18.10.1-1.26427.6+3cd27c13e for .NET Framework
+        Build started 10-09-2026 16:52:21.
+        
+        Project "C:\\Users\\himanshu\\.gemini\\antigravity\\scratch\\Retour\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8qsxzw\\cmTC_07ac7.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\himanshu\\.gemini\\antigravity\\scratch\\Retour\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8qsxzw\\Debug\\".
+          Creating directory "cmTC_07ac7.dir\\Debug\\cmTC_07ac7.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_07ac7.dir\\Debug\\cmTC_07ac7.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_07ac7.dir\\Debug\\cmTC_07ac7.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_07ac7.dir\\Debug\\\\" /Fd"cmTC_07ac7.dir\\Debug\\vc145.pdb" /external:W3 /TC /errorReport:queue "C:\\Users\\himanshu\\.gemini\\antigravity\\scratch\\Retour\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8qsxzw\\CheckFunctionExists.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.51.36257 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_07ac7.dir\\Debug\\\\" /Fd"cmTC_07ac7.dir\\Debug\\vc145.pdb" /external:W3 /TC /errorReport:queue "C:\\Users\\himanshu\\.gemini\\antigravity\\scratch\\Retour\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8qsxzw\\CheckFunctionExists.c"
+          CheckFunctionExists.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\himanshu\\.gemini\\antigravity\\scratch\\Retour\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8qsxzw\\Debug\\cmTC_07ac7.exe" /INCREMENTAL /ILK:"cmTC_07ac7.dir\\Debug\\cmTC_07ac7.ilk" /NOLOGO pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/CMakeFiles/CMakeScratch/TryCompile-8qsxzw/Debug/cmTC_07ac7.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/CMakeFiles/CMakeScratch/TryCompile-8qsxzw/Debug/cmTC_07ac7.lib" /MACHINE:X64  /machine:x64 cmTC_07ac7.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\Users\\himanshu\\.gemini\\antigravity\\scratch\\Retour\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8qsxzw\\cmTC_07ac7.vcxproj]
+        Done Building Project "C:\\Users\\himanshu\\.gemini\\antigravity\\scratch\\Retour\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8qsxzw\\cmTC_07ac7.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "C:\\Users\\himanshu\\.gemini\\antigravity\\scratch\\Retour\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8qsxzw\\cmTC_07ac7.vcxproj" (default target) (1) ->
+        (Link target) -> 
+          LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\Users\\himanshu\\.gemini\\antigravity\\scratch\\Retour\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8qsxzw\\cmTC_07ac7.vcxproj]
+        
+            0 Warning(s)
+            1 Error(s)
+        
+        Time Elapsed 00:00:00.49
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CheckLibraryExists.cmake:142 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/FindThreads.cmake:175 (check_library_exists)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/FindThreads.cmake:239 (_threads_check_lib)"
+      - "CMakeLists.txt:9 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthread"
+    directories:
+      source: "C:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/CMakeFiles/CMakeScratch/TryCompile-zn7ai5"
+      binary: "C:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/CMakeFiles/CMakeScratch/TryCompile-zn7ai5"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREAD_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/CMakeFiles/CMakeScratch/TryCompile-zn7ai5'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/18/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_4a6fb.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        MSBuild version 18.10.1-1.26427.6+3cd27c13e for .NET Framework
+        Build started 10-09-2026 16:52:22.
+        
+        Project "C:\\Users\\himanshu\\.gemini\\antigravity\\scratch\\Retour\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zn7ai5\\cmTC_4a6fb.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\himanshu\\.gemini\\antigravity\\scratch\\Retour\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zn7ai5\\Debug\\".
+          Creating directory "cmTC_4a6fb.dir\\Debug\\cmTC_4a6fb.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_4a6fb.dir\\Debug\\cmTC_4a6fb.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_4a6fb.dir\\Debug\\cmTC_4a6fb.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_4a6fb.dir\\Debug\\\\" /Fd"cmTC_4a6fb.dir\\Debug\\vc145.pdb" /external:W3 /TC /errorReport:queue "C:\\Users\\himanshu\\.gemini\\antigravity\\scratch\\Retour\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zn7ai5\\CheckFunctionExists.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.51.36257 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_4a6fb.dir\\Debug\\\\" /Fd"cmTC_4a6fb.dir\\Debug\\vc145.pdb" /external:W3 /TC /errorReport:queue "C:\\Users\\himanshu\\.gemini\\antigravity\\scratch\\Retour\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zn7ai5\\CheckFunctionExists.c"
+          CheckFunctionExists.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\himanshu\\.gemini\\antigravity\\scratch\\Retour\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zn7ai5\\Debug\\cmTC_4a6fb.exe" /INCREMENTAL /ILK:"cmTC_4a6fb.dir\\Debug\\cmTC_4a6fb.ilk" /NOLOGO pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/CMakeFiles/CMakeScratch/TryCompile-zn7ai5/Debug/cmTC_4a6fb.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/himanshu/.gemini/antigravity/scratch/Retour/build/CMakeFiles/CMakeScratch/TryCompile-zn7ai5/Debug/cmTC_4a6fb.lib" /MACHINE:X64  /machine:x64 cmTC_4a6fb.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\Users\\himanshu\\.gemini\\antigravity\\scratch\\Retour\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zn7ai5\\cmTC_4a6fb.vcxproj]
+        Done Building Project "C:\\Users\\himanshu\\.gemini\\antigravity\\scratch\\Retour\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zn7ai5\\cmTC_4a6fb.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "C:\\Users\\himanshu\\.gemini\\antigravity\\scratch\\Retour\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zn7ai5\\cmTC_4a6fb.vcxproj" (default target) (1) ->
+        (Link target) -> 
+          LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\Users\\himanshu\\.gemini\\antigravity\\scratch\\Retour\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zn7ai5\\cmTC_4a6fb.vcxproj]
+        
+            0 Warning(s)
+            1 Error(s)
+        
+        Time Elapsed 00:00:00.51
+        
+      exitCode: 1
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/FindPython/Support.cmake:2346 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/FindPython3.cmake:699 (include)"
+      - "build/_deps/googletest-src/googletest/cmake/internal_utils.cmake:250 (find_package)"
+      - "build/_deps/googletest-src/googletest/CMakeLists.txt:81 (include)"
+    mode: "program"
+    variable: "_Python3_EXECUTABLE"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: false
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "python3.15"
+      - "python3"
+      - "python"
+      - "ipy3.15"
+      - "ipy3"
+      - "ipy64"
+      - "ipy32"
+      - "ipy"
+      - "ipy.exe"
+    candidate_directories:
+      - "/REGISTRY-NOTFOUND/bin/"
+      - "/REGISTRY-NOTFOUND/Scripts/"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/"
+      - "/REGISTRY-NOTFOUND/net45/"
+      - "/REGISTRY-NOTFOUND/net40/"
+      - "/REGISTRY-NOTFOUND/"
+    searched_directories:
+      - "/REGISTRY-NOTFOUND/bin/python3.15.com"
+      - "/REGISTRY-NOTFOUND/bin/python3.15.exe"
+      - "/REGISTRY-NOTFOUND/bin/python3.15"
+      - "/REGISTRY-NOTFOUND/bin/python3.com"
+      - "/REGISTRY-NOTFOUND/bin/python3.exe"
+      - "/REGISTRY-NOTFOUND/bin/python3"
+      - "/REGISTRY-NOTFOUND/bin/python.com"
+      - "/REGISTRY-NOTFOUND/bin/python.exe"
+      - "/REGISTRY-NOTFOUND/bin/python"
+      - "/REGISTRY-NOTFOUND/bin/ipy3.15.com"
+      - "/REGISTRY-NOTFOUND/bin/ipy3.15.exe"
+      - "/REGISTRY-NOTFOUND/bin/ipy3.15"
+      - "/REGISTRY-NOTFOUND/bin/ipy3.com"
+      - "/REGISTRY-NOTFOUND/bin/ipy3.exe"
+      - "/REGISTRY-NOTFOUND/bin/ipy3"
+      - "/REGISTRY-NOTFOUND/bin/ipy64.com"
+      - "/REGISTRY-NOTFOUND/bin/ipy64.exe"
+      - "/REGISTRY-NOTFOUND/bin/ipy64"
+      - "/REGISTRY-NOTFOUND/bin/ipy32.com"
+      - "/REGISTRY-NOTFOUND/bin/ipy32.exe"
+      - "/REGISTRY-NOTFOUND/bin/ipy32"
+      - "/REGISTRY-NOTFOUND/bin/ipy.com"
+      - "/REGISTRY-NOTFOUND/bin/ipy.exe"
+      - "/REGISTRY-NOTFOUND/bin/ipy"
+      - "/REGISTRY-NOTFOUND/bin/ipy.exe.com"
+      - "/REGISTRY-NOTFOUND/bin/ipy.exe"
+      - "/REGISTRY-NOTFOUND/Scripts/python3.15.com"
+      - "/REGISTRY-NOTFOUND/Scripts/python3.15.exe"
+      - "/REGISTRY-NOTFOUND/Scripts/python3.15"
+      - "/REGISTRY-NOTFOUND/Scripts/python3.com"
+      - "/REGISTRY-NOTFOUND/Scripts/python3.exe"
+      - "/REGISTRY-NOTFOUND/Scripts/python3"
+      - "/REGISTRY-NOTFOUND/Scripts/python.com"
+      - "/REGISTRY-NOTFOUND/Scripts/python.exe"
+      - "/REGISTRY-NOTFOUND/Scripts/python"
+      - "/REGISTRY-NOTFOUND/Scripts/ipy3.15.com"
+      - "/REGISTRY-NOTFOUND/Scripts/ipy3.15.exe"
+      - "/REGISTRY-NOTFOUND/Scripts/ipy3.15"
+      - "/REGISTRY-NOTFOUND/Scripts/ipy3.com"
+      - "/REGISTRY-NOTFOUND/Scripts/ipy3.exe"
+      - "/REGISTRY-NOTFOUND/Scripts/ipy3"
+      - "/REGISTRY-NOTFOUND/Scripts/ipy64.com"
+      - "/REGISTRY-NOTFOUND/Scripts/ipy64.exe"
+      - "/REGISTRY-NOTFOUND/Scripts/ipy64"
+      - "/REGISTRY-NOTFOUND/Scripts/ipy32.com"
+      - "/REGISTRY-NOTFOUND/Scripts/ipy32.exe"
+      - "/REGISTRY-NOTFOUND/Scripts/ipy32"
+      - "/REGISTRY-NOTFOUND/Scripts/ipy.com"
+      - "/REGISTRY-NOTFOUND/Scripts/ipy.exe"
+      - "/REGISTRY-NOTFOUND/Scripts/ipy"
+      - "/REGISTRY-NOTFOUND/Scripts/ipy.exe.com"
+      - "/REGISTRY-NOTFOUND/Scripts/ipy.exe"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/python3.15.com"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/python3.15.exe"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/python3.15"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/python3.com"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/python3.exe"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/python3"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/python.com"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/python.exe"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/python"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/ipy3.15.com"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/ipy3.15.exe"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/ipy3.15"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/ipy3.com"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/ipy3.exe"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/ipy3"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/ipy64.com"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/ipy64.exe"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/ipy64"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/ipy32.com"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/ipy32.exe"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/ipy32"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/ipy.com"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/ipy.exe"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/ipy"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/ipy.exe.com"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/ipy.exe"
+      - "/REGISTRY-NOTFOUND/net45/python3.15.com"
+      - "/REGISTRY-NOTFOUND/net45/python3.15.exe"
+      - "/REGISTRY-NOTFOUND/net45/python3.15"
+      - "/REGISTRY-NOTFOUND/net45/python3.com"
+      - "/REGISTRY-NOTFOUND/net45/python3.exe"
+      - "/REGISTRY-NOTFOUND/net45/python3"
+      - "/REGISTRY-NOTFOUND/net45/python.com"
+      - "/REGISTRY-NOTFOUND/net45/python.exe"
+      - "/REGISTRY-NOTFOUND/net45/python"
+      - "/REGISTRY-NOTFOUND/net45/ipy3.15.com"
+      - "/REGISTRY-NOTFOUND/net45/ipy3.15.exe"
+      - "/REGISTRY-NOTFOUND/net45/ipy3.15"
+      - "/REGISTRY-NOTFOUND/net45/ipy3.com"
+      - "/REGISTRY-NOTFOUND/net45/ipy3.exe"
+      - "/REGISTRY-NOTFOUND/net45/ipy3"
+      - "/REGISTRY-NOTFOUND/net45/ipy64.com"
+      - "/REGISTRY-NOTFOUND/net45/ipy64.exe"
+      - "/REGISTRY-NOTFOUND/net45/ipy64"
+      - "/REGISTRY-NOTFOUND/net45/ipy32.com"
+      - "/REGISTRY-NOTFOUND/net45/ipy32.exe"
+      - "/REGISTRY-NOTFOUND/net45/ipy32"
+      - "/REGISTRY-NOTFOUND/net45/ipy.com"
+      - "/REGISTRY-NOTFOUND/net45/ipy.exe"
+      - "/REGISTRY-NOTFOUND/net45/ipy"
+      - "/REGISTRY-NOTFOUND/net45/ipy.exe.com"
+      - "/REGISTRY-NOTFOUND/net45/ipy.exe"
+      - "/REGISTRY-NOTFOUND/net40/python3.15.com"
+      - "/REGISTRY-NOTFOUND/net40/python3.15.exe"
+      - "/REGISTRY-NOTFOUND/net40/python3.15"
+      - "/REGISTRY-NOTFOUND/net40/python3.com"
+      - "/REGISTRY-NOTFOUND/net40/python3.exe"
+      - "/REGISTRY-NOTFOUND/net40/python3"
+      - "/REGISTRY-NOTFOUND/net40/python.com"
+      - "/REGISTRY-NOTFOUND/net40/python.exe"
+      - "/REGISTRY-NOTFOUND/net40/python"
+      - "/REGISTRY-NOTFOUND/net40/ipy3.15.com"
+      - "/REGISTRY-NOTFOUND/net40/ipy3.15.exe"
+      - "/REGISTRY-NOTFOUND/net40/ipy3.15"
+      - "/REGISTRY-NOTFOUND/net40/ipy3.com"
+      - "/REGISTRY-NOTFOUND/net40/ipy3.exe"
+      - "/REGISTRY-NOTFOUND/net40/ipy3"
+      - "/REGISTRY-NOTFOUND/net40/ipy64.com"
+      - "/REGISTRY-NOTFOUND/net40/ipy64.exe"
+      - "/REGISTRY-NOTFOUND/net40/ipy64"
+      - "/REGISTRY-NOTFOUND/net40/ipy32.com"
+      - "/REGISTRY-NOTFOUND/net40/ipy32.exe"
+      - "/REGISTRY-NOTFOUND/net40/ipy32"
+      - "/REGISTRY-NOTFOUND/net40/ipy.com"
+      - "/REGISTRY-NOTFOUND/net40/ipy.exe"
+      - "/REGISTRY-NOTFOUND/net40/ipy"
+      - "/REGISTRY-NOTFOUND/net40/ipy.exe.com"
+      - "/REGISTRY-NOTFOUND/net40/ipy.exe"
+      - "/REGISTRY-NOTFOUND/python3.15.com"
+      - "/REGISTRY-NOTFOUND/python3.15.exe"
+      - "/REGISTRY-NOTFOUND/python3.15"
+      - "/REGISTRY-NOTFOUND/python3.com"
+      - "/REGISTRY-NOTFOUND/python3.exe"
+      - "/REGISTRY-NOTFOUND/python3"
+      - "/REGISTRY-NOTFOUND/python.com"
+      - "/REGISTRY-NOTFOUND/python.exe"
+      - "/REGISTRY-NOTFOUND/python"
+      - "/REGISTRY-NOTFOUND/ipy3.15.com"
+      - "/REGISTRY-NOTFOUND/ipy3.15.exe"
+      - "/REGISTRY-NOTFOUND/ipy3.15"
+      - "/REGISTRY-NOTFOUND/ipy3.com"
+      - "/REGISTRY-NOTFOUND/ipy3.exe"
+      - "/REGISTRY-NOTFOUND/ipy3"
+      - "/REGISTRY-NOTFOUND/ipy64.com"
+      - "/REGISTRY-NOTFOUND/ipy64.exe"
+      - "/REGISTRY-NOTFOUND/ipy64"
+      - "/REGISTRY-NOTFOUND/ipy32.com"
+      - "/REGISTRY-NOTFOUND/ipy32.exe"
+      - "/REGISTRY-NOTFOUND/ipy32"
+      - "/REGISTRY-NOTFOUND/ipy.com"
+      - "/REGISTRY-NOTFOUND/ipy.exe"
+      - "/REGISTRY-NOTFOUND/ipy"
+      - "/REGISTRY-NOTFOUND/ipy.exe.com"
+      - "/REGISTRY-NOTFOUND/ipy.exe"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\windows\\system32"
+        - "C:\\windows"
+        - "C:\\windows\\System32\\Wbem"
+        - "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Cloudflare\\Cloudflare WARP\\"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Users\\himanshu\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\himanshu\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/Retour"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files (x86)/Retour"
+...
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/FindPython/Support.cmake:2346 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/FindPython3.cmake:699 (include)"
+      - "build/_deps/googletest-src/googletest/cmake/internal_utils.cmake:250 (find_package)"
+      - "build/_deps/googletest-src/googletest/CMakeLists.txt:81 (include)"
+    mode: "program"
+    variable: "_Python3_EXECUTABLE"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: false
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "python3.15"
+      - "python3"
+      - "python"
+      - "ipy3.15"
+      - "ipy3"
+      - "ipy64"
+      - "ipy32"
+      - "ipy"
+      - "ipy.exe"
+    candidate_directories:
+      - "/REGISTRY-NOTFOUND/bin/"
+      - "/REGISTRY-NOTFOUND/Scripts/"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/"
+      - "/REGISTRY-NOTFOUND/net45/"
+      - "/REGISTRY-NOTFOUND/net40/"
+      - "/REGISTRY-NOTFOUND/"
+    searched_directories:
+      - "/REGISTRY-NOTFOUND/bin/python3.15.com"
+      - "/REGISTRY-NOTFOUND/bin/python3.15.exe"
+      - "/REGISTRY-NOTFOUND/bin/python3.15"
+      - "/REGISTRY-NOTFOUND/bin/python3.com"
+      - "/REGISTRY-NOTFOUND/bin/python3.exe"
+      - "/REGISTRY-NOTFOUND/bin/python3"
+      - "/REGISTRY-NOTFOUND/bin/python.com"
+      - "/REGISTRY-NOTFOUND/bin/python.exe"
+      - "/REGISTRY-NOTFOUND/bin/python"
+      - "/REGISTRY-NOTFOUND/bin/ipy3.15.com"
+      - "/REGISTRY-NOTFOUND/bin/ipy3.15.exe"
+      - "/REGISTRY-NOTFOUND/bin/ipy3.15"
+      - "/REGISTRY-NOTFOUND/bin/ipy3.com"
+      - "/REGISTRY-NOTFOUND/bin/ipy3.exe"
+      - "/REGISTRY-NOTFOUND/bin/ipy3"
+      - "/REGISTRY-NOTFOUND/bin/ipy64.com"
+      - "/REGISTRY-NOTFOUND/bin/ipy64.exe"
+      - "/REGISTRY-NOTFOUND/bin/ipy64"
+      - "/REGISTRY-NOTFOUND/bin/ipy32.com"
+      - "/REGISTRY-NOTFOUND/bin/ipy32.exe"
+      - "/REGISTRY-NOTFOUND/bin/ipy32"
+      - "/REGISTRY-NOTFOUND/bin/ipy.com"
+      - "/REGISTRY-NOTFOUND/bin/ipy.exe"
+      - "/REGISTRY-NOTFOUND/bin/ipy"
+      - "/REGISTRY-NOTFOUND/bin/ipy.exe.com"
+      - "/REGISTRY-NOTFOUND/bin/ipy.exe"
+      - "/REGISTRY-NOTFOUND/Scripts/python3.15.com"
+      - "/REGISTRY-NOTFOUND/Scripts/python3.15.exe"
+      - "/REGISTRY-NOTFOUND/Scripts/python3.15"
+      - "/REGISTRY-NOTFOUND/Scripts/python3.com"
+      - "/REGISTRY-NOTFOUND/Scripts/python3.exe"
+      - "/REGISTRY-NOTFOUND/Scripts/python3"
+      - "/REGISTRY-NOTFOUND/Scripts/python.com"
+      - "/REGISTRY-NOTFOUND/Scripts/python.exe"
+      - "/REGISTRY-NOTFOUND/Scripts/python"
+      - "/REGISTRY-NOTFOUND/Scripts/ipy3.15.com"
+      - "/REGISTRY-NOTFOUND/Scripts/ipy3.15.exe"
+      - "/REGISTRY-NOTFOUND/Scripts/ipy3.15"
+      - "/REGISTRY-NOTFOUND/Scripts/ipy3.com"
+      - "/REGISTRY-NOTFOUND/Scripts/ipy3.exe"
+      - "/REGISTRY-NOTFOUND/Scripts/ipy3"
+      - "/REGISTRY-NOTFOUND/Scripts/ipy64.com"
+      - "/REGISTRY-NOTFOUND/Scripts/ipy64.exe"
+      - "/REGISTRY-NOTFOUND/Scripts/ipy64"
+      - "/REGISTRY-NOTFOUND/Scripts/ipy32.com"
+      - "/REGISTRY-NOTFOUND/Scripts/ipy32.exe"
+      - "/REGISTRY-NOTFOUND/Scripts/ipy32"
+      - "/REGISTRY-NOTFOUND/Scripts/ipy.com"
+      - "/REGISTRY-NOTFOUND/Scripts/ipy.exe"
+      - "/REGISTRY-NOTFOUND/Scripts/ipy"
+      - "/REGISTRY-NOTFOUND/Scripts/ipy.exe.com"
+      - "/REGISTRY-NOTFOUND/Scripts/ipy.exe"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/python3.15.com"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/python3.15.exe"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/python3.15"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/python3.com"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/python3.exe"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/python3"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/python.com"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/python.exe"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/python"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/ipy3.15.com"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/ipy3.15.exe"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/ipy3.15"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/ipy3.com"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/ipy3.exe"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/ipy3"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/ipy64.com"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/ipy64.exe"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/ipy64"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/ipy32.com"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/ipy32.exe"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/ipy32"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/ipy.com"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/ipy.exe"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/ipy"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/ipy.exe.com"
+      - "/REGISTRY-NOTFOUND/share/ironpython3.15/ipy.exe"
+      - "/REGISTRY-NOTFOUND/net45/python3.15.com"
+      - "/REGISTRY-NOTFOUND/net45/python3.15.exe"
+      - "/REGISTRY-NOTFOUND/net45/python3.15"
+      - "/REGISTRY-NOTFOUND/net45/python3.com"
+      - "/REGISTRY-NOTFOUND/net45/python3.exe"
+      - "/REGISTRY-NOTFOUND/net45/python3"
+      - "/REGISTRY-NOTFOUND/net45/python.com"
+      - "/REGISTRY-NOTFOUND/net45/python.exe"
+      - "/REGISTRY-NOTFOUND/net45/python"
+      - "/REGISTRY-NOTFOUND/net45/ipy3.15.com"
+      - "/REGISTRY-NOTFOUND/net45/ipy3.15.exe"
+      - "/REGISTRY-NOTFOUND/net45/ipy3.15"
+      - "/REGISTRY-NOTFOUND/net45/ipy3.com"
+      - "/REGISTRY-NOTFOUND/net45/ipy3.exe"
+      - "/REGISTRY-NOTFOUND/net45/ipy3"
+      - "/REGISTRY-NOTFOUND/net45/ipy64.com"
+      - "/REGISTRY-NOTFOUND/net45/ipy64.exe"
+      - "/REGISTRY-NOTFOUND/net45/ipy64"
+      - "/REGISTRY-NOTFOUND/net45/ipy32.com"
+      - "/REGISTRY-NOTFOUND/net45/ipy32.exe"
+      - "/REGISTRY-NOTFOUND/net45/ipy32"
+      - "/REGISTRY-NOTFOUND/net45/ipy.com"
+      - "/REGISTRY-NOTFOUND/net45/ipy.exe"
+      - "/REGISTRY-NOTFOUND/net45/ipy"
+      - "/REGISTRY-NOTFOUND/net45/ipy.exe.com"
+      - "/REGISTRY-NOTFOUND/net45/ipy.exe"
+      - "/REGISTRY-NOTFOUND/net40/python3.15.com"
+      - "/REGISTRY-NOTFOUND/net40/python3.15.exe"
+      - "/REGISTRY-NOTFOUND/net40/python3.15"
+      - "/REGISTRY-NOTFOUND/net40/python3.com"
+      - "/REGISTRY-NOTFOUND/net40/python3.exe"
+      - "/REGISTRY-NOTFOUND/net40/python3"
+      - "/REGISTRY-NOTFOUND/net40/python.com"
+      - "/REGISTRY-NOTFOUND/net40/python.exe"
+      - "/REGISTRY-NOTFOUND/net40/python"
+      - "/REGISTRY-NOTFOUND/net40/ipy3.15.com"
+      - "/REGISTRY-NOTFOUND/net40/ipy3.15.exe"
+      - "/REGISTRY-NOTFOUND/net40/ipy3.15"
+      - "/REGISTRY-NOTFOUND/net40/ipy3.com"
+      - "/REGISTRY-NOTFOUND/net40/ipy3.exe"
+      - "/REGISTRY-NOTFOUND/net40/ipy3"
+      - "/REGISTRY-NOTFOUND/net40/ipy64.com"
+      - "/REGISTRY-NOTFOUND/net40/ipy64.exe"
+      - "/REGISTRY-NOTFOUND/net40/ipy64"
+      - "/REGISTRY-NOTFOUND/net40/ipy32.com"
+      - "/REGISTRY-NOTFOUND/net40/ipy32.exe"
+      - "/REGISTRY-NOTFOUND/net40/ipy32"
+      - "/REGISTRY-NOTFOUND/net40/ipy.com"
+      - "/REGISTRY-NOTFOUND/net40/ipy.exe"
+      - "/REGISTRY-NOTFOUND/net40/ipy"
+      - "/REGISTRY-NOTFOUND/net40/ipy.exe.com"
+      - "/REGISTRY-NOTFOUND/net40/ipy.exe"
+      - "/REGISTRY-NOTFOUND/python3.15.com"
+      - "/REGISTRY-NOTFOUND/python3.15.exe"
+      - "/REGISTRY-NOTFOUND/python3.15"
+      - "/REGISTRY-NOTFOUND/python3.com"
+      - "/REGISTRY-NOTFOUND/python3.exe"
+      - "/REGISTRY-NOTFOUND/python3"
+      - "/REGISTRY-NOTFOUND/python.com"
+      - "/REGISTRY-NOTFOUND/python.exe"
+      - "/REGISTRY-NOTFOUND/python"
+      - "/REGISTRY-NOTFOUND/ipy3.15.com"
+      - "/REGISTRY-NOTFOUND/ipy3.15.exe"
+      - "/REGISTRY-NOTFOUND/ipy3.15"
+      - "/REGISTRY-NOTFOUND/ipy3.com"
+      - "/REGISTRY-NOTFOUND/ipy3.exe"
+      - "/REGISTRY-NOTFOUND/ipy3"
+      - "/REGISTRY-NOTFOUND/ipy64.com"
+      - "/REGISTRY-NOTFOUND/ipy64.exe"
+      - "/REGISTRY-NOTFOUND/ipy64"
+      - "/REGISTRY-NOTFOUND/ipy32.com"
+      - "/REGISTRY-NOTFOUND/ipy32.exe"
+      - "/REGISTRY-NOTFOUND/ipy32"
+      - "/REGISTRY-NOTFOUND/ipy.com"
+      - "/REGISTRY-NOTFOUND/ipy.exe"
+      - "/REGISTRY-NOTFOUND/ipy"
+      - "/REGISTRY-NOTFOUND/ipy.exe.com"
+      - "/REGISTRY-NOTFOUND/ipy.exe"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\windows\\system32"
+        - "C:\\windows"
+        - "C:\\windows\\System32\\Wbem"
+        - "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Cloudflare\\Cloudflare WARP\\"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Users\\himanshu\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\himanshu\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/Retour"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files (x86)/Retour"
+...

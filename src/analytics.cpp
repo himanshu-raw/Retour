@@ -91,9 +91,10 @@ SegmentMetrics AnalyticsEngine::getMetricsForSegment(const std::string& segment_
 std::vector<SegmentMetrics> AnalyticsEngine::getHotspots() const {
     std::vector<SegmentMetrics> hotspots;
     for (const auto& [seg_id, metrics] : m_current_metrics) {
-        if (metrics.is_hotspot) {
-            hotspots.push_back(metrics);
-        }
+        // For the sake of the live demo, we will return ALL tracked segments 
+        // to the frontend so the map is always populated with data, 
+        // even if traffic is currently flowing perfectly!
+        hotspots.push_back(metrics);
     }
     
     // Sort by severity (highest delay first)

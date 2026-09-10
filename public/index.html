@@ -9,13 +9,21 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     
+    <!-- Leaflet Routing Machine -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+
+    <!-- Leaflet Geocoder (Search Bar) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="sidebar">
         <h1>🚦 Retour Analytics</h1>
-        <p>Live congestion monitoring powered by C++ and HERE Maps.</p>
+        <p style="font-size: 0.9rem; color: #aaa; margin-bottom: 20px;">Live congestion monitoring powered by C++ and TomTom API.</p>
         
         <div class="stats-card">
             <h3>Active Hotspots</h3>
@@ -26,6 +34,29 @@
             <h3>Severe Anomalies</h3>
             <div id="anomaly-count">Loading...</div>
         </div>
+        
+        <div class="stats-card" id="route-panel">
+            <h3>🗺️ Route Planner</h3>
+            <button id="btn-add-route" class="btn">📍 Plan New Route</button>
+            <p id="route-instructions" style="font-size: 0.85rem; color:#aaa; margin: 10px 0; display: none;">Click the map to drop your <b>Start</b> and <b>End</b> pins.</p>
+            
+            <div id="route-summary-box" style="display: none; margin-top: 15px; padding-top: 15px; border-top: 1px solid #333;">
+                <div id="route-status" style="font-size: 0.9rem; color: #ffaa00; text-align: center;">Waiting for input...</div>
+                
+                <div class="route-metrics" id="route-metrics" style="display: none;">
+                    <div class="metric">
+                        <span class="value" id="route-time">--</span>
+                        <span class="label">MINUTES</span>
+                    </div>
+                    <div class="metric">
+                        <span class="value" id="route-dist">--</span>
+                        <span class="label">KILOMETERS</span>
+                    </div>
+                </div>
+                
+                <div id="route-alerts" class="route-alert-box" style="display: none;"></div>
+            </div>
+        </div>
 
         <div id="segment-list">
             <!-- Dynamically populated list of congested segments -->
@@ -34,22 +65,182 @@
     
     <div id="map"></div>
 
-    <script>
-        // Initialize Map centered on Chicago (our default BBOX)
-        const map = L.map('map').setView([41.88, -87.62], 13);
+    <!-- Map Legend -->
+    <div id="legend">
+        <h4>Traffic Legend</h4>
+        <div class="legend-item">
+            <span class="legend-color" style="background: #ff3333; box-shadow: 0 0 8px #ff3333;"></span>
+            <span>Severe Anomaly</span>
+        </div>
+        <div class="legend-item">
+            <span class="legend-color" style="background: #ffaa00;"></span>
+            <span>Active Hotspot</span>
+        </div>
+    </div>
 
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-            subdomains: 'abcd',
-            maxZoom: 20
+    <script>
+        // Initialize Map centered on India (so you can see traffic across the whole country)
+        const map = L.map('map').setView([20.5937, 78.9629], 5);
+
+        // Add Search Bar (Geocoder) to Top Right
+        L.Control.geocoder({
+            position: 'topright',
+            placeholder: 'Search for a country or city...',
+            defaultMarkGeocode: false
+        }).on('markgeocode', function(e) {
+            var bbox = e.geocode.bbox;
+            var poly = L.polygon([
+                bbox.getSouthEast(),
+                bbox.getNorthEast(),
+                bbox.getNorthWest(),
+                bbox.getSouthWest()
+            ]);
+            map.fitBounds(poly.getBounds());
+        }).addTo(map);
+
+        // Esri World Street Map (100% free, renders labels in English globally)
+        L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+            attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012',
+            maxZoom: 19
         }).addTo(map);
 
         let markers = {};
+        let routeControl = null;
+        let routeCoordinates = [];
+        let waypoints = [];
+        let isRoutingMode = false;
+
+        document.getElementById('btn-add-route').addEventListener('click', function() {
+            isRoutingMode = !isRoutingMode;
+            if (isRoutingMode) {
+                this.innerHTML = '❌ Cancel Route';
+                this.style.background = 'linear-gradient(135deg, #ff4b4b 0%, #d80000 100%)';
+                document.getElementById('route-instructions').style.display = 'block';
+                document.getElementById('route-summary-box').style.display = 'block';
+                document.getElementById('route-status').style.display = 'block';
+                document.getElementById('route-metrics').style.display = 'none';
+                document.getElementById('route-alerts').style.display = 'none';
+                document.getElementById('route-status').innerText = 'Click on map to set Start point.';
+            } else {
+                this.innerHTML = '📍 Plan New Route';
+                this.style.background = 'linear-gradient(135deg, #0078FF 0%, #0056b3 100%)';
+                document.getElementById('route-instructions').style.display = 'none';
+                document.getElementById('route-summary-box').style.display = 'none';
+                
+                waypoints = [];
+                routeCoordinates = [];
+                if (routeControl) {
+                    map.removeControl(routeControl);
+                    routeControl = null;
+                }
+            }
+        });
+
+        // Route generation via click
+        map.on('click', function(e) {
+            if (!isRoutingMode) return;
+
+            if (waypoints.length >= 2) {
+                waypoints = []; // Reset if we already have 2 points
+                if (routeControl) {
+                    map.removeControl(routeControl);
+                    routeControl = null;
+                }
+                document.getElementById('route-status').innerText = 'Click on map to set Start point.';
+                document.getElementById('route-alerts').innerText = '';
+                routeCoordinates = [];
+            }
+            
+            waypoints.push(e.latlng);
+            
+            if (waypoints.length === 1) {
+                document.getElementById('route-status').style.display = 'block';
+                document.getElementById('route-metrics').style.display = 'none';
+                document.getElementById('route-alerts').style.display = 'none';
+                document.getElementById('route-status').innerText = 'Start point set. Click map for destination.';
+            } else if (waypoints.length === 2) {
+                document.getElementById('route-status').innerText = 'Calculating Route...';
+                
+                routeControl = L.Routing.control({
+                    waypoints: waypoints,
+                    routeWhileDragging: false,
+                    show: false, // hide the default routing instructions panel
+                    lineOptions: {
+                        styles: [{color: '#00D1FF', opacity: 0.9, weight: 6, className: 'glowing-route'}]
+                    }
+                }).addTo(map);
+
+                routeControl.on('routesfound', function(e) {
+                    var routes = e.routes;
+                    var summary = routes[0].summary;
+                    
+                    document.getElementById('route-status').style.display = 'none';
+                    document.getElementById('route-metrics').style.display = 'flex';
+                    
+                    document.getElementById('route-time').innerText = Math.round(summary.totalTime / 60);
+                    document.getElementById('route-dist').innerText = (summary.totalDistance / 1000).toFixed(1);
+                    
+                    routeCoordinates = routes[0].coordinates;
+                    checkRouteTraffic();
+                });
+            }
+        });
+
+        // Function to check distance between hotspot and route
+        function getDistanceFromLatLonInM(lat1, lon1, lat2, lon2) {
+            var R = 6371e3; // Radius of the earth in m
+            var dLat = (lat2 - lat1) * Math.PI / 180;
+            var dLon = (lon2 - lon1) * Math.PI / 180;
+            var a = 
+                Math.sin(dLat/2) * Math.sin(dLat/2) +
+                Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) * 
+                Math.sin(dLon/2) * Math.sin(dLon/2); 
+            var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
+            return R * c; // Distance in m
+        }
+
+        let currentHotspots = [];
+
+        function checkRouteTraffic() {
+            if (routeCoordinates.length === 0 || currentHotspots.length === 0) return;
+
+            let anomaliesOnRoute = 0;
+            let hotspotsOnRoute = 0;
+
+            // Simple intersection: check if any hotspot is within 100 meters of any route coordinate
+            for (let hs of currentHotspots) {
+                for (let coord of routeCoordinates) {
+                    let dist = getDistanceFromLatLonInM(hs.lat, hs.lon, coord.lat, coord.lng);
+                    if (dist < 100) {
+                        if (hs.is_anomaly) anomaliesOnRoute++;
+                        else hotspotsOnRoute++;
+                        break; // Move to next hotspot once we know this one intersects
+                    }
+                }
+            }
+
+            let alertText = "";
+            if (anomaliesOnRoute > 0) alertText += `<div style="margin-bottom:5px;">⚠️ <b>${anomaliesOnRoute} Severe Anomalies</b></div>`;
+            if (hotspotsOnRoute > 0) alertText += `<div>⚠️ <b>${hotspotsOnRoute} Delays</b></div>`;
+            
+            const alertBox = document.getElementById('route-alerts');
+            alertBox.style.display = 'block';
+            
+            if (alertText === "") {
+                alertBox.className = 'route-alert-box clear';
+                alertBox.innerHTML = `✅ <b>Route is clear!</b> No active delays.`;
+            } else {
+                alertBox.className = 'route-alert-box danger';
+                alertBox.innerHTML = alertText;
+            }
+        }
 
         async function fetchHotspots() {
             try {
                 const response = await fetch('/hotspots');
                 const data = await response.json();
+                
+                currentHotspots = data;
                 
                 let anomalyCount = 0;
                 
@@ -89,17 +280,30 @@
                         markers[hs.segment_id].setLatLng([hs.lat, hs.lon]);
                         markers[hs.segment_id].setStyle({ color: color, fillColor: color, radius: radius });
                     }
-
-                    // Render Sidebar Item
-                    const item = document.createElement('div');
-                    item.className = 'segment-item';
-                    item.innerHTML = `
-                        <strong>${hs.segment_id}</strong>
-                        <span class="badge ${hs.is_anomaly ? 'danger' : 'warning'}">${hs.current_avg_speed.toFixed(0)} mph</span>
-                        <div style="font-size: 0.8rem; color: #888; margin-top: 5px;">Delay: ${hs.current_delay.toFixed(0)} mph | Z: ${hs.z_score.toFixed(1)}</div>
-                    `;
-                    segmentList.appendChild(item);
                 });
+
+                for (let i = 0; i < Math.min(data.length, 5); i++) {
+                    const hs = data[i];
+                    const div = document.createElement('div');
+                    div.className = 'segment-item';
+                    
+                    // Make it clickable to fly to the location
+                    div.onclick = function() {
+                        map.flyTo([hs.lat, hs.lon], 15, {
+                            duration: 1.5,
+                            easeLinearity: 0.25
+                        });
+                    };
+
+                    div.innerHTML = `
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <div class="segment-id">${hs.segment_id}</div>
+                            <span class="speed-badge">${hs.current_avg_speed.toFixed(0)} mph</span>
+                        </div>
+                        <div class="segment-delay">Delay: ${hs.current_delay.toFixed(0)} mph | Z: ${hs.z_score.toFixed(1)}</div>
+                    `;
+                    segmentList.appendChild(div);
+                }
 
                 // Remove stale markers
                 for (const [id, marker] of Object.entries(markers)) {
@@ -112,6 +316,8 @@
                 // Update UI Stats
                 document.getElementById('hotspot-count').innerText = data.length;
                 document.getElementById('anomaly-count').innerText = anomalyCount;
+
+                checkRouteTraffic();
 
             } catch (err) {
                 console.error("Error fetching hotspots:", err);

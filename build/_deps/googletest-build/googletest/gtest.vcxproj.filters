@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\himanshu\.gemini\antigravity\scratch\Retour\build\_deps\googletest-src\googletest\src\gtest-all.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\himanshu\.gemini\antigravity\scratch\Retour\build\_deps\googletest-src\googletest\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4016838B-D3FA-3EC2-BD6F-D3265ED58362}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

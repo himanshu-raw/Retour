@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\himanshu\.gemini\antigravity\scratch\Retour\build\CMakeFiles\ff206a3b91e43f80f7ed048fd340f9aa\RUN_TESTS_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{7A100EFF-006C-3D9C-83DE-A9765F5DE7D2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
