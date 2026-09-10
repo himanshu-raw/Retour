@@ -1,9 +1,0 @@
-services:
-  retour:
-    build: .
-    ports:
-      - "8080:8080"
-    environment:
-      - HERE_API_KEY=${HERE_API_KEY:-YOUR_API_KEY}
-      - HERE_BBOX=${HERE_BBOX:-41.87,-87.64;41.89,-87.61}
-    restart: unless-stopped

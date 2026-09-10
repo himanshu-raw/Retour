@@ -11,20 +11,20 @@
 int main() {
     std::cout << "Starting Retour Traffic Analytics System..." << std::endl;
 
-    // Check for HERE API Key in environment
-    const char* env_api_key = std::getenv("HERE_API_KEY");
+    // Check for TomTom API Key in environment
+    const char* env_api_key = std::getenv("TOMTOM_API_KEY");
     std::string api_key = env_api_key ? std::string(env_api_key) : "YOUR_API_KEY";
     
     // Default bounding box for Chicago (as an example)
-    const char* env_bbox = std::getenv("HERE_BBOX");
+    const char* env_bbox = std::getenv("TOMTOM_BBOX");
     std::string bbox = env_bbox ? std::string(env_bbox) : "41.87,-87.64;41.89,-87.61";
 
     if (api_key == "YOUR_API_KEY") {
-        std::cerr << "[WARNING] HERE_API_KEY environment variable not set!" << std::endl;
+        std::cerr << "[WARNING] TOMTOM_API_KEY environment variable not set!" << std::endl;
         std::cerr << "Live traffic ingestion will skip HTTP requests. Please run with: " << std::endl;
-        std::cerr << "  $env:HERE_API_KEY=\"<your_key>\" ; .\\retour_app.exe" << std::endl;
+        std::cerr << "  $env:TOMTOM_API_KEY=\"<your_key>\" ; .\\Release\\retour_app.exe" << std::endl;
     } else {
-        std::cout << "[INFO] Using HERE Traffic API with bounding box: " << bbox << std::endl;
+        std::cout << "[INFO] Using TomTom Traffic API with bounding box: " << bbox << std::endl;
     }
 
     // Initialize Components

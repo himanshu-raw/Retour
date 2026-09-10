@@ -49,89 +49,94 @@ void DataIngestion::fetchLiveTrafficData() {
         return;
     }
 
-    httplib::Client cli("https://traffic.ls.hereapi.com");
-    cli.enable_server_certificate_verification(false); // Simplification for Windows environments without cert bundles configured
+    httplib::Client cli("https://api.tomtom.com");
+    cli.enable_server_certificate_verification(false);
 
-    std::string path = "/traffic/6.2/flow.json?apiKey=" + m_api_key + "&bbox=" + m_bbox;
+    // Parse the bounding box to generate random points inside it
+    // Expected format: lat1,lon1;lat2,lon2
+    double lat_min = 41.87, lat_max = 41.89;
+    double lon_min = -87.64, lon_max = -87.61;
     
-    auto res = cli.Get(path.c_str());
-    
-    if (res && res->status == 200) {
-        try {
-            auto j = json::parse(res->body);
-            auto now = std::chrono::duration_cast<std::chrono::seconds>(
-                std::chrono::system_clock::now().time_since_epoch()).count();
-
-            // Navigate the nested HERE flow JSON schema
-            if (j.contains("RWS")) {
-                for (const auto& rws : j["RWS"]) {
-                    if (rws.contains("RW")) {
-                        for (const auto& rw : rws["RW"]) {
-                            if (rw.contains("FIS")) {
-                                for (const auto& fis : rw["FIS"]) {
-                                    if (fis.contains("FI")) {
-                                        for (const auto& fi : fis["FI"]) {
-                                            
-                                            // Extract Segment ID (TMC code or description)
-                                            std::string segment_id = "UNKNOWN";
-                                            if (fi.contains("TMC") && fi["TMC"].contains("DE")) {
-                                                segment_id = fi["TMC"]["DE"].get<std::string>();
-                                            } else if (fi.contains("TMC") && fi["TMC"].contains("PC")) {
-                                                segment_id = std::to_string(fi["TMC"]["PC"].get<int>());
-                                            }
-
-                                            // Extract Speed
-                                            if (fi.contains("CF") && !fi["CF"].empty()) {
-                                                const auto& cf = fi["CF"][0];
-                                                double speed = 0.0;
-                                                
-                                                if (cf.contains("SU")) { // Speed Uncapped
-                                                    speed = cf["SU"].get<double>();
-                                                } else if (cf.contains("SP")) {
-                                                    speed = cf["SP"].get<double>();
-                                                }
-
-                                                // Build record
-                                                TrafficRecord rec;
-                                                rec.segment_id = segment_id;
-                                                rec.timestamp = now;
-                                                rec.speed = speed;
-                                                
-                                                // Extract coordinates if available, otherwise mock based on bbox center
-                                                if (fi.contains("TMC") && fi["TMC"].contains("PC") && fi.contains("SHP")) {
-                                                    // Depending on HERE schema, SHP can be complex.
-                                                    // For now, we'll assign a random jitter around Chicago center to visualize it
-                                                }
-                                                // Mock geo jitter around 41.88, -87.62
-                                                static std::mt19937 geo_gen(std::random_device{}());
-                                                static std::uniform_real_distribution<> lat_dist(41.87, 41.89);
-                                                static std::uniform_real_distribution<> lon_dist(-87.64, -87.61);
-                                                rec.lat = lat_dist(geo_gen);
-                                                rec.lon = lon_dist(geo_gen);
-                                                
-                                                // We don't get absolute volume, but we get Jam Factor (JF) [0.0 - 10.0]
-                                                // We can scale JF to a pseudo-volume for analytics if needed
-                                                double jf = cf.contains("JF") ? cf["JF"].get<double>() : 0.0;
-                                                rec.volume = static_cast<int>(jf * 10); 
-                                                
-                                                m_queue->push(rec);
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            std::cout << "[Ingestion] Successfully fetched and parsed HERE Traffic data." << std::endl;
-        } catch (const std::exception& e) {
-            std::cerr << "[Ingestion] JSON Parsing error: " << e.what() << std::endl;
-        }
-    } else {
-        std::cerr << "[Ingestion] HTTP Request failed. Status: " << (res ? res->status : -1) << std::endl;
-        if (res && !res->body.empty()) {
-            std::cerr << "[Ingestion] Response: " << res->body << std::endl;
+    size_t semi_pos = m_bbox.find(';');
+    if (semi_pos != std::string::npos) {
+        std::string p1 = m_bbox.substr(0, semi_pos);
+        std::string p2 = m_bbox.substr(semi_pos + 1);
+        
+        size_t comma1 = p1.find(',');
+        size_t comma2 = p2.find(',');
+        if (comma1 != std::string::npos && comma2 != std::string::npos) {
+            lat_min = std::stod(p1.substr(0, comma1));
+            lon_min = std::stod(p1.substr(comma1 + 1));
+            lat_max = std::stod(p2.substr(0, comma2));
+            lon_max = std::stod(p2.substr(comma2 + 1));
+            
+            if (lat_min > lat_max) std::swap(lat_min, lat_max);
+            if (lon_min > lon_max) std::swap(lon_min, lon_max);
         }
     }
+
+    static std::mt19937 geo_gen(std::random_device{}());
+    std::uniform_real_distribution<> lat_dist(lat_min, lat_max);
+    std::uniform_real_distribution<> lon_dist(lon_min, lon_max);
+
+    // Sample 3 random points in the bounding box per interval
+    for (int i = 0; i < 3; ++i) {
+        double query_lat = lat_dist(geo_gen);
+        double query_lon = lon_dist(geo_gen);
+
+        std::string path = "/traffic/services/4/flowSegmentData/absolute/10/json?key=" + m_api_key + 
+                           "&point=" + std::to_string(query_lat) + "," + std::to_string(query_lon);
+        
+        auto res = cli.Get(path.c_str());
+        
+        if (res && res->status == 200) {
+            try {
+                auto j = json::parse(res->body);
+                auto now = std::chrono::duration_cast<std::chrono::seconds>(
+                    std::chrono::system_clock::now().time_since_epoch()).count();
+
+                if (j.contains("flowSegmentData")) {
+                    const auto& flow = j["flowSegmentData"];
+                    
+                    double speed = flow.value("currentSpeed", 65.0);
+                    double confidence = flow.value("confidence", 0.0); // 0.0 to 1.0
+                    
+                    double act_lat = query_lat;
+                    double act_lon = query_lon;
+
+                    // Extract actual segment coordinates if provided
+                    if (flow.contains("coordinates") && flow["coordinates"].contains("coordinate")) {
+                        const auto& coords = flow["coordinates"]["coordinate"];
+                        if (!coords.empty()) {
+                            act_lat = coords[0].value("latitude", query_lat);
+                            act_lon = coords[0].value("longitude", query_lon);
+                        }
+                    }
+
+                    // Create a synthetic segment ID based on the exact coordinate geometry start point
+                    std::string segment_id = "SEG_" + std::to_string(act_lat) + "_" + std::to_string(act_lon);
+
+                    TrafficRecord rec;
+                    rec.segment_id = segment_id;
+                    rec.timestamp = now;
+                    rec.speed = speed;
+                    rec.lat = act_lat;
+                    rec.lon = act_lon;
+                    
+                    // Map TomTom confidence (0-1) to our pseudo-volume metric (0-10)
+                    rec.volume = static_cast<int>(confidence * 10); 
+                    
+                    m_queue->push(rec);
+                }
+            } catch (const std::exception& e) {
+                std::cerr << "[Ingestion] JSON Parsing error: " << e.what() << std::endl;
+            }
+        } else {
+            // Ignore 404s (point might not be on a road)
+            if (res && res->status != 404) {
+                std::cerr << "[Ingestion] HTTP Request failed. Status: " << (res ? res->status : -1) << std::endl;
+            }
+        }
+    }
+    std::cout << "[Ingestion] Finished TomTom polling cycle." << std::endl;
 }
