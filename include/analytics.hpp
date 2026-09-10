@@ -12,6 +12,8 @@ struct SegmentMetrics {
     bool is_hotspot;
     bool is_anomaly;
     double z_score;
+    double lat = 0.0;
+    double lon = 0.0;
 };
 
 class AnalyticsEngine {
@@ -34,6 +36,8 @@ private:
     // In-memory state for rolling calculations
     std::unordered_map<std::string, std::vector<double>> m_recent_speeds; // window of speeds
     std::unordered_map<std::string, SegmentMetrics> m_current_metrics;
+    std::unordered_map<std::string, std::pair<double, double>> m_coordinates; // lat, lon
+    
     
     const size_t WINDOW_SIZE = 10; // Number of records for rolling average
     const double FREE_FLOW_SPEED = 65.0; // km/h or mph

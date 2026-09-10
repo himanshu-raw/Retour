@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retour: Live Traffic Dashboard</title>
+    
+    <!-- Leaflet CSS & JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="sidebar">
+        <h1>🚦 Retour Analytics</h1>
+        <p>Live congestion monitoring powered by C++ and HERE Maps.</p>
+        
+        <div class="stats-card">
+            <h3>Active Hotspots</h3>
+            <div id="hotspot-count">Loading...</div>
+        </div>
+        
+        <div class="stats-card">
+            <h3>Severe Anomalies</h3>
+            <div id="anomaly-count">Loading...</div>
+        </div>
+
+        <div id="segment-list">
+            <!-- Dynamically populated list of congested segments -->
+        </div>
+    </div>
+    
+    <div id="map"></div>
+
+    <script>
+        // Initialize Map centered on Chicago (our default BBOX)
+        const map = L.map('map').setView([41.88, -87.62], 13);
+
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+            subdomains: 'abcd',
+            maxZoom: 20
+        }).addTo(map);
+
+        let markers = {};
+
+        async function fetchHotspots() {
+            try {
+                const response = await fetch('/hotspots');
+                const data = await response.json();
+                
+                let anomalyCount = 0;
+                
+                const segmentList = document.getElementById('segment-list');
+                segmentList.innerHTML = '<h3>Top Congested Segments</h3>';
+
+                // Keep track of which IDs we've seen this tick to remove old markers
+                const currentIds = new Set();
+
+                data.forEach(hs => {
+                    currentIds.add(hs.segment_id);
+                    if (hs.is_anomaly) anomalyCount++;
+
+                    // Determine color based on z-score anomaly
+                    const color = hs.is_anomaly ? '#ff3333' : '#ffaa00';
+                    const radius = hs.is_anomaly ? 12 : 8;
+
+                    // Render Marker
+                    if (!markers[hs.segment_id]) {
+                        // Create new marker
+                        const marker = L.circleMarker([hs.lat, hs.lon], {
+                            color: color,
+                            fillColor: color,
+                            fillOpacity: 0.7,
+                            radius: radius
+                        }).addTo(map);
+                        
+                        marker.bindPopup(`
+                            <strong>Segment:</strong> ${hs.segment_id}<br>
+                            <strong>Avg Speed:</strong> ${hs.current_avg_speed.toFixed(1)} mph<br>
+                            <strong>Delay:</strong> ${hs.current_delay.toFixed(1)} mph<br>
+                            <strong>Anomaly Z-Score:</strong> ${hs.z_score.toFixed(2)}
+                        `);
+                        markers[hs.segment_id] = marker;
+                    } else {
+                        // Update existing marker
+                        markers[hs.segment_id].setLatLng([hs.lat, hs.lon]);
+                        markers[hs.segment_id].setStyle({ color: color, fillColor: color, radius: radius });
+                    }
+
+                    // Render Sidebar Item
+                    const item = document.createElement('div');
+                    item.className = 'segment-item';
+                    item.innerHTML = `
+                        <strong>${hs.segment_id}</strong>
+                        <span class="badge ${hs.is_anomaly ? 'danger' : 'warning'}">${hs.current_avg_speed.toFixed(0)} mph</span>
+                        <div style="font-size: 0.8rem; color: #888; margin-top: 5px;">Delay: ${hs.current_delay.toFixed(0)} mph | Z: ${hs.z_score.toFixed(1)}</div>
+                    `;
+                    segmentList.appendChild(item);
+                });
+
+                // Remove stale markers
+                for (const [id, marker] of Object.entries(markers)) {
+                    if (!currentIds.has(id)) {
+                        map.removeLayer(marker);
+                        delete markers[id];
+                    }
+                }
+
+                // Update UI Stats
+                document.getElementById('hotspot-count').innerText = data.length;
+                document.getElementById('anomaly-count').innerText = anomalyCount;
+
+            } catch (err) {
+                console.error("Error fetching hotspots:", err);
+            }
+        }
+
+        // Poll every 3 seconds
+        setInterval(fetchHotspots, 3000);
+        fetchHotspots();
+    </script>
+</body>
+</html>

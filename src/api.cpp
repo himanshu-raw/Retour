@@ -17,6 +17,8 @@ ApiServer::~ApiServer() {
 }
 
 void ApiServer::setupRoutes() {
+    m_server.set_mount_point("/", "./public");
+
     m_server.Get("/hotspots", [this](const httplib::Request&, httplib::Response& res) {
         auto hotspots = m_analytics->getHotspots();
         json j = json::array();
@@ -26,7 +28,9 @@ void ApiServer::setupRoutes() {
                 {"current_avg_speed", hs.current_avg_speed},
                 {"current_delay", hs.current_delay},
                 {"is_anomaly", hs.is_anomaly},
-                {"z_score", hs.z_score}
+                {"z_score", hs.z_score},
+                {"lat", hs.lat},
+                {"lon", hs.lon}
             });
         }
         res.set_content(j.dump(), "application/json");

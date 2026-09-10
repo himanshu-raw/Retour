@@ -11,6 +11,11 @@ void AnalyticsEngine::processRecords(const std::vector<TrafficRecord>& records) 
     std::unordered_map<std::string, std::vector<double>> incoming_by_segment;
     for (const auto& rec : records) {
         incoming_by_segment[rec.segment_id].push_back(rec.speed);
+        
+        // Keep track of latest coordinates
+        if (rec.lat != 0.0 && rec.lon != 0.0) {
+            m_coordinates[rec.segment_id] = {rec.lat, rec.lon};
+        }
     }
 
     for (const auto& [seg_id, speeds] : incoming_by_segment) {
@@ -61,6 +66,13 @@ void AnalyticsEngine::updateSegmentMetrics(const std::string& segment_id, const 
     metrics.is_hotspot = is_hotspot;
     metrics.is_anomaly = is_anomaly;
     metrics.z_score = z_score;
+    
+    // Attach coordinates if available
+    auto coord_it = m_coordinates.find(segment_id);
+    if (coord_it != m_coordinates.end()) {
+        metrics.lat = coord_it->second.first;
+        metrics.lon = coord_it->second.second;
+    }
 
     m_current_metrics[segment_id] = metrics;
 }

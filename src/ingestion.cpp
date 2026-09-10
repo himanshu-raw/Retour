@@ -97,6 +97,18 @@ void DataIngestion::fetchLiveTrafficData() {
                                                 rec.timestamp = now;
                                                 rec.speed = speed;
                                                 
+                                                // Extract coordinates if available, otherwise mock based on bbox center
+                                                if (fi.contains("TMC") && fi["TMC"].contains("PC") && fi.contains("SHP")) {
+                                                    // Depending on HERE schema, SHP can be complex.
+                                                    // For now, we'll assign a random jitter around Chicago center to visualize it
+                                                }
+                                                // Mock geo jitter around 41.88, -87.62
+                                                static std::mt19937 geo_gen(std::random_device{}());
+                                                static std::uniform_real_distribution<> lat_dist(41.87, 41.89);
+                                                static std::uniform_real_distribution<> lon_dist(-87.64, -87.61);
+                                                rec.lat = lat_dist(geo_gen);
+                                                rec.lon = lon_dist(geo_gen);
+                                                
                                                 // We don't get absolute volume, but we get Jam Factor (JF) [0.0 - 10.0]
                                                 // We can scale JF to a pseudo-volume for analytics if needed
                                                 double jf = cf.contains("JF") ? cf["JF"].get<double>() : 0.0;

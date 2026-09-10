@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+#sidebar {
+    width: 350px;
+    background: rgba(30, 30, 30, 0.95);
+    backdrop-filter: blur(10px);
+    border-right: 1px solid #333;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    overflow-y: auto;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.5);
+}
+
+#sidebar h1 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    background: -webkit-linear-gradient(45deg, #ff6b6b, #ff8e53);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#sidebar p {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+.stats-card {
+    background: #2a2a2a;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #444;
+}
+
+.stats-card h3 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.stats-card div {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#segment-list {
+    margin-top: 10px;
+}
+
+#segment-list h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #ddd;
+    border-bottom: 1px solid #444;
+    padding-bottom: 5px;
+}
+
+.segment-item {
+    background: #222;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    border-left: 4px solid #444;
+    position: relative;
+    transition: transform 0.2s;
+}
+
+.segment-item:hover {
+    transform: translateX(5px);
+    background: #2a2a2a;
+}
+
+.badge {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.badge.danger {
+    background: rgba(255, 51, 51, 0.2);
+    color: #ff3333;
+}
+
+.badge.warning {
+    background: rgba(255, 170, 0, 0.2);
+    color: #ffaa00;
+}
+
+#map {
+    flex: 1;
+    height: 100%;
+}
